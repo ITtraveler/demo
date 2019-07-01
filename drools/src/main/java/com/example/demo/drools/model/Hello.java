@@ -2,7 +2,7 @@
  * beedo.com Inc.
  * Copyright (c) 2018- All Rights Reserved.
  */
-package com.example.droolsrule.model;
+package com.example.demo.drools.model;
 
 import lombok.Data;
 

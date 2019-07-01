@@ -1,14 +1,11 @@
-package com.example.droolsrule;
+package com.example.demo.drools;
 
-import com.example.droolsrule.model.Hello;
-import org.drools.core.impl.KnowledgeBaseFactory;
+import com.example.demo.drools.model.Hello;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-import org.kie.internal.builder.KnowledgeBuilder;
-import org.kie.internal.builder.KnowledgeBuilderFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -16,7 +13,7 @@ import java.util.UUID;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DroolsruleApplicationTests {
+public class DroolsApplicationTests {
 
     @Test
     public void testRules() {
@@ -24,7 +21,7 @@ public class DroolsruleApplicationTests {
         KieContainer kieClasspathContainer = kieServices.getKieClasspathContainer();
         KieSession kieSession = kieClasspathContainer.newKieSession("ksession-rule");
         Hello hello = new Hello();
-      //  hello.setUuid(UUID.randomUUID().toString());
+        hello.setUuid(UUID.randomUUID().toString());
         hello.setContent("hello world,first run drools!");
         kieSession.insert(hello);
 

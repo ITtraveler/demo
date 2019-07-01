@@ -1,5 +1,5 @@
 package rules
-import com.example.droolsrule.model.*;
+import com.example.demo.drools.model.*;
 
 rule "hello"
     when
