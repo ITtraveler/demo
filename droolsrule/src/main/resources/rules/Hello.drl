@@ -1,0 +1,16 @@
+package rules
+import com.example.droolsrule.model.*;
+
+rule "hello"
+    when
+        $hello:Hello(uuid!=null)
+    then
+        System.out.println($hello.getContent());
+    end
+
+rule "default"
+    when
+        $hello:Hello(uuid==null)
+    then
+        System.out.println("--hello world--");
+    end
