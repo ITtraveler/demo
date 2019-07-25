@@ -1,6 +1,7 @@
 package com.example.demo.drools;
 
-import com.example.demo.drools.model.Hello;
+import java.util.UUID;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.KieServices;
@@ -9,14 +10,14 @@ import org.kie.api.runtime.KieSession;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.UUID;
+import com.example.demo.drools.model.Hello;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class DroolsApplicationTests {
 
     @Test
-    public void testRules() {
+    public void testRulesHello() {
         KieServices kieServices = KieServices.get();
         KieContainer kieClasspathContainer = kieServices.getKieClasspathContainer();
         KieSession kieSession = kieClasspathContainer.newKieSession("ksession-rule");
