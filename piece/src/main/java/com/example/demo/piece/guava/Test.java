@@ -1,7 +1,3 @@
-/**
- * yingyinglicai.com Inc.
- * Copyright (c) 2013-2019 All Rights Reserved.
- */
 package com.example.demo.piece.guava;
 
 import java.time.Duration;
